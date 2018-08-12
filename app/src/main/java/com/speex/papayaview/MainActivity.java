@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 
 import com.speex.papayaview.activity.CanvasTestActivity;
+import com.speex.papayaview.activity.ClockActivity;
 import com.speex.papayaview.utils.ScreenSizeUtil;
 
 public class MainActivity extends AppCompatActivity {
@@ -58,6 +59,16 @@ public class MainActivity extends AppCompatActivity {
      */
     public void useCanvas(View view) {
         Intent intent = new Intent(this, CanvasTestActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * Canvas画布使用二(时钟)
+     *
+     * @param view
+     */
+    public void useCanvas2(View view) {
+        Intent intent = new Intent(this, ClockActivity.class);
         startActivity(intent);
     }
 }
