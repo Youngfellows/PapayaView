@@ -8,6 +8,7 @@ import android.view.View;
 
 import com.speex.papayaview.activity.CanvasTestActivity;
 import com.speex.papayaview.activity.ClockActivity;
+import com.speex.papayaview.activity.PieViewActivity;
 import com.speex.papayaview.utils.ScreenSizeUtil;
 
 public class MainActivity extends AppCompatActivity {
@@ -69,6 +70,17 @@ public class MainActivity extends AppCompatActivity {
      */
     public void useCanvas2(View view) {
         Intent intent = new Intent(this, ClockActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 饼状图
+     *
+     * @param view
+     */
+    public void pieViewShow(View view) {
+        Intent intent = new Intent();
+        intent.setClass(this, PieViewActivity.class);
         startActivity(intent);
     }
 }

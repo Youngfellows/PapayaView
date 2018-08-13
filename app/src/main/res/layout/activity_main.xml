@@ -24,6 +24,12 @@
             android:onClick="useCanvas2"
             android:text="Canvas画布使用2(时钟)"/>
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="pieViewShow"
+            android:text="饼装图"/>
+
 
     </LinearLayout>
 
