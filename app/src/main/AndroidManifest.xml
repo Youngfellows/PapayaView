@@ -22,6 +22,8 @@
         </activity>
         <activity android:name=".activity.PieViewActivity">
         </activity>
+        <activity android:name=".activity.CanvasControlActivity">
+        </activity>
     </application>
 
 </manifest>

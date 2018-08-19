@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
+import com.speex.papayaview.activity.CanvasControlActivity;
 import com.speex.papayaview.activity.CanvasTestActivity;
 import com.speex.papayaview.activity.ClockActivity;
 import com.speex.papayaview.activity.PieViewActivity;
@@ -83,4 +84,17 @@ public class MainActivity extends AppCompatActivity {
         intent.setClass(this, PieViewActivity.class);
         startActivity(intent);
     }
+
+    /**
+     * 画布的基本操作
+     * 平移、缩放、旋转、错切
+     *
+     * @param view
+     */
+    public void controlCanvas(View view) {
+        Intent intent = new Intent();
+        intent.setClass(this, CanvasControlActivity.class);
+        startActivity(intent);
+    }
+
 }
