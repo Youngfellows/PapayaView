@@ -6,10 +6,13 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
+import com.speex.papayaview.activity.AlarmActivity;
 import com.speex.papayaview.activity.CanvasControlActivity;
+import com.speex.papayaview.activity.CanvasSaveActivity;
 import com.speex.papayaview.activity.CanvasTestActivity;
 import com.speex.papayaview.activity.ClockActivity;
 import com.speex.papayaview.activity.PieViewActivity;
+import com.speex.papayaview.activity.ScaleRulerActivity;
 import com.speex.papayaview.utils.ScreenSizeUtil;
 
 public class MainActivity extends AppCompatActivity {
@@ -94,6 +97,36 @@ public class MainActivity extends AppCompatActivity {
     public void controlCanvas(View view) {
         Intent intent = new Intent();
         intent.setClass(this, CanvasControlActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 画布保存状态与恢复
+     *
+     * @param view
+     */
+    public void canvasSave(View view) {
+        Intent intent = new Intent(this, CanvasSaveActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 闹钟表盘
+     *
+     * @param view
+     */
+    public void alarmClockDial(View view) {
+        Intent intent = new Intent(this, AlarmActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 绘制刻度尺
+     *
+     * @param view
+     */
+    public void scaleRuler(View view) {
+        Intent intent = new Intent(this, ScaleRulerActivity.class);
         startActivity(intent);
     }
 

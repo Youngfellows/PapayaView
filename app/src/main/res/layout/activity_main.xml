@@ -37,13 +37,39 @@
             android:onClick="useCanvas2"
             android:text="Canvas画布使用2(时钟)"/>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="controlCanvas"
-            android:text="画布的基本操作"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="controlCanvas"
+                android:text="画布的基本操作"/>
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="canvasSave"
+                android:text="画布状态保存"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="alarmClockDial"
+                android:text="闹钟表盘"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="scaleRuler"
+                android:text="刻度尺"/>
+        </LinearLayout>
     </LinearLayout>
 
 </ScrollView>
