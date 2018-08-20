@@ -5,9 +5,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.ClockActivity">
+    tools:context="com.speex.papayaview.activity.AlarmClockDialActivity">
 
-    <com.speex.papayaview.view.clock.ClockView
+    <!--<com.speex.papayaview.view.clock.RotateClockView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"/>-->
+    <!---->
+    <com.speex.papayaview.view.clock.AlarmClockDialView
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 

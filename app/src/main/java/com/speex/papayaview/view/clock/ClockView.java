@@ -1,4 +1,4 @@
-package com.speex.papayaview.view;
+package com.speex.papayaview.view.clock;
 
 import android.content.Context;
 import android.graphics.Canvas;

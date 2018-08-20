@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context="com.speex.papayaview.activity.AlarmActivity">
 
-    <com.speex.papayaview.view.canvas.AlarmClockDialView
+    <com.speex.papayaview.view.clock.AlarmClockDialView
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 

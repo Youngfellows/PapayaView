@@ -31,11 +31,23 @@
 
         </LinearLayout>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="useCanvas2"
-            android:text="Canvas画布使用2(时钟)"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="useCanvas2"
+                android:text="Canvas画布使用2(时钟)"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="clockScale"
+                android:text="闹钟刻度"/>
+        </LinearLayout>
+
 
         <LinearLayout
             android:layout_width="match_parent"

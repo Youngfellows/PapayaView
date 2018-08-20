@@ -30,6 +30,8 @@
         </activity>
         <activity android:name=".activity.ScaleRulerActivity">
         </activity>
+        <activity android:name=".activity.AlarmClockDialActivity">
+        </activity>
     </application>
 
 </manifest>
