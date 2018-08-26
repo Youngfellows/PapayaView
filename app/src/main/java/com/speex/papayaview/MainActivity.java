@@ -11,7 +11,9 @@ import com.speex.papayaview.activity.AlarmClockDialActivity;
 import com.speex.papayaview.activity.CanvasControlActivity;
 import com.speex.papayaview.activity.CanvasSaveActivity;
 import com.speex.papayaview.activity.CanvasTestActivity;
+import com.speex.papayaview.activity.CheckActivity;
 import com.speex.papayaview.activity.ClockActivity;
+import com.speex.papayaview.activity.PictureActivity;
 import com.speex.papayaview.activity.PieViewActivity;
 import com.speex.papayaview.activity.ScaleRulerActivity;
 import com.speex.papayaview.utils.ScreenSizeUtil;
@@ -141,4 +143,24 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    /**
+     * 打钩动画
+     *
+     * @param view
+     */
+    public void checkView(View view) {
+        Intent intent = new Intent();
+        intent.setClass(this, CheckActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * Picture录屏
+     *
+     * @param view
+     */
+    public void picture(View view) {
+        Intent intent = new Intent(this, PictureActivity.class);
+        startActivity(intent);
+    }
 }
