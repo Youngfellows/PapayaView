@@ -36,6 +36,8 @@
         </activity>
         <activity android:name=".activity.PictureActivity">
         </activity>
+        <activity android:name=".activity.DrawTextActivity">
+        </activity>
     </application>
 
 </manifest>

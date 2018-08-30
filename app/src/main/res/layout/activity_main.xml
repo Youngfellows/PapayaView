@@ -94,6 +94,17 @@
                 android:onClick="picture"
                 android:text="Picture录屏"/>
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:onClick="drawText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="绘制文本"/>
+        </LinearLayout>
     </LinearLayout>
 
 </ScrollView>
