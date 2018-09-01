@@ -14,6 +14,7 @@ import com.speex.papayaview.activity.CanvasTestActivity;
 import com.speex.papayaview.activity.CheckActivity;
 import com.speex.papayaview.activity.ClockActivity;
 import com.speex.papayaview.activity.DrawTextActivity;
+import com.speex.papayaview.activity.DrawTextOnPathActivity;
 import com.speex.papayaview.activity.PictureActivity;
 import com.speex.papayaview.activity.PieViewActivity;
 import com.speex.papayaview.activity.ScaleRulerActivity;
@@ -173,6 +174,17 @@ public class MainActivity extends AppCompatActivity {
     public void drawText(View view) {
         Intent intent = new Intent();
         intent.setClass(this, DrawTextActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 绘制路径文本
+     *
+     * @param view
+     */
+    public void drawTextOnPath(View view) {
+        Intent intent = new Intent();
+        intent.setClass(this, DrawTextOnPathActivity.class);
         startActivity(intent);
     }
 }

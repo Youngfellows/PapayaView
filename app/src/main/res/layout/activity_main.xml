@@ -100,10 +100,16 @@
             android:layout_height="wrap_content">
 
             <Button
-                android:onClick="drawText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="drawText"
                 android:text="绘制文本"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="drawTextOnPath"
+                android:text="绘制路径文本"/>
         </LinearLayout>
     </LinearLayout>
 

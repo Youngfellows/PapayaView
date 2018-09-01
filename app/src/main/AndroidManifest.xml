@@ -38,6 +38,8 @@
         </activity>
         <activity android:name=".activity.DrawTextActivity">
         </activity>
+        <activity android:name=".activity.DrawTextOnPathActivity">
+        </activity>
     </application>
 
 </manifest>
