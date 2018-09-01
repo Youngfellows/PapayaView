@@ -104,7 +104,8 @@ public class DrawTextOnPathView extends View {
 
         //绘制文字
         mPaint.setStyle(Paint.Style.FILL);
-        canvas.drawTextOnPath(DEFAULT_TEXT, mPaths[2], -20, -20, mPaint);
+//        canvas.drawTextOnPath(DEFAULT_TEXT, mPaths[2], -20, -20, mPaint);
+        canvas.drawTextOnPath(DEFAULT_TEXT, mPaths[2], 0, 40, mPaint);
         canvas.restore();//恢复画布状态
     }
 
