@@ -16,6 +16,7 @@ import com.speex.papayaview.activity.ClockActivity;
 import com.speex.papayaview.activity.DrawTextActivity;
 import com.speex.papayaview.activity.DrawTextOnPathActivity;
 import com.speex.papayaview.activity.DynamicPatActivity;
+import com.speex.papayaview.activity.PathUseActivity;
 import com.speex.papayaview.activity.PathViewActivity;
 import com.speex.papayaview.activity.PictureActivity;
 import com.speex.papayaview.activity.PieViewActivity;
@@ -209,6 +210,15 @@ public class MainActivity extends AppCompatActivity {
     public void dynamicPath(View view) {
         Intent intent = new Intent();
         intent.setClass(this, DynamicPatActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * @param view
+     */
+    public void pathUse2(View view) {
+        Intent intent = new Intent();
+        intent.setClass(this, PathUseActivity.class);
         startActivity(intent);
     }
 }

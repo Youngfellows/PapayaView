@@ -127,6 +127,12 @@
                 android:layout_height="wrap_content"
                 android:onClick="dynamicPath"
                 android:text="动态贝塞尔曲线"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="pathUse2"
+                android:text="Path基本使用"/>
         </LinearLayout>
     </LinearLayout>
 

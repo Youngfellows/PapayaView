@@ -45,6 +45,8 @@
         </activity>
         <activity android:name=".activity.DynamicPatActivity">
         </activity>
+        <activity android:name=".activity.PathUseActivity">
+        </activity>
     </application>
 
 </manifest>
