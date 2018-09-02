@@ -15,6 +15,8 @@ import com.speex.papayaview.activity.CheckActivity;
 import com.speex.papayaview.activity.ClockActivity;
 import com.speex.papayaview.activity.DrawTextActivity;
 import com.speex.papayaview.activity.DrawTextOnPathActivity;
+import com.speex.papayaview.activity.DynamicPatActivity;
+import com.speex.papayaview.activity.PathViewActivity;
 import com.speex.papayaview.activity.PictureActivity;
 import com.speex.papayaview.activity.PieViewActivity;
 import com.speex.papayaview.activity.ScaleRulerActivity;
@@ -185,6 +187,28 @@ public class MainActivity extends AppCompatActivity {
     public void drawTextOnPath(View view) {
         Intent intent = new Intent();
         intent.setClass(this, DrawTextOnPathActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * Path的基本使用
+     *
+     * @param view
+     */
+    public void pathUse(View view) {
+        Intent intent = new Intent();
+        intent.setClass(this, PathViewActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 动态贝塞尔曲线
+     *
+     * @param view
+     */
+    public void dynamicPath(View view) {
+        Intent intent = new Intent();
+        intent.setClass(this, DynamicPatActivity.class);
         startActivity(intent);
     }
 }

@@ -110,6 +110,23 @@
                 android:layout_height="wrap_content"
                 android:onClick="drawTextOnPath"
                 android:text="绘制路径文本"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="pathUse"
+                android:text="Path基本使用"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="dynamicPath"
+                android:text="动态贝塞尔曲线"/>
         </LinearLayout>
     </LinearLayout>
 
