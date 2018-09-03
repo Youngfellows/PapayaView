@@ -5,6 +5,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
+import android.graphics.RectF;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
@@ -66,6 +67,79 @@ public class PathUseView extends View {
 
         //setLastPoint
         setLastPoint(canvas);
+
+        //绘制圆
+        drawCircle(canvas);
+
+        //绘制椭圆
+        drawOval(canvas);
+
+        //绘制矩形
+        drawRect(canvas);
+    }
+
+    /**
+     * 绘制矩形
+     *
+     * @param canvas
+     */
+    private void drawRect(Canvas canvas) {
+        canvas.save();
+        canvas.translate(mWidth / 8, mHeigth / 2);
+        mPaint.setStyle(Paint.Style.STROKE);
+        int length = Math.min(mWidth, mHeigth) / 8;
+        RectF rectF = new RectF(0, 0, 2 * length, length);
+        Path path = new Path();
+        //绘制矩形
+        path.addRect(rectF, Path.Direction.CCW);
+        canvas.drawPath(path, mPaint);
+
+        //绘制文字
+        mPaint.setTextAlign(Paint.Align.LEFT);
+        mPaint.setStyle(Paint.Style.FILL);
+        canvas.drawTextOnPath("绘 制 矩 形", path, length, -20, mPaint);
+        canvas.restore();
+    }
+
+    /**
+     * 绘制椭圆
+     *
+     * @param canvas
+     */
+    private void drawOval(Canvas canvas) {
+        canvas.save();
+        canvas.translate(3 * mWidth / 5, 3 * mHeigth / 8);
+        int length = Math.min(mWidth, mHeigth) / 8;
+        mPaint.setStyle(Paint.Style.STROKE);
+        Path path = new Path();
+        RectF rectF = new RectF(-length, 0, 2 * length, length);
+        //绘制椭圆
+        path.addOval(rectF, Path.Direction.CCW);
+        canvas.drawPath(path, mPaint);
+        //绘制文本
+        mPaint.setStyle(Paint.Style.FILL);
+        canvas.drawTextOnPath("绘 制 椭 圆", path, 4 * length, -20, mPaint);
+        canvas.restore();
+    }
+
+    /**
+     * 绘制圆
+     *
+     * @param canvas
+     */
+    private void drawCircle(Canvas canvas) {
+        canvas.save();
+        canvas.translate(3 * mWidth / 5, mHeigth / 4);
+        mPaint.setStyle(Paint.Style.STROKE);
+        int radius = Math.min(mWidth, mHeigth) / 7;
+        Path path = new Path();
+        //绘制圆
+        path.addCircle(0, 0, radius, Path.Direction.CCW);
+        canvas.drawPath(path, mPaint);
+        //绘制文本
+        mPaint.setStyle(Paint.Style.FILL);
+        canvas.drawTextOnPath("Path绘制圆", path, 0, -20, mPaint);
+        canvas.restore();
     }
 
     private void moveTo(Canvas canvas) {
