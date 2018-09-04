@@ -79,6 +79,50 @@ public class PathUseView extends View {
 
         //绘制圆角矩形
         drawRoundRect(canvas);
+
+        //设置最后一个点
+        setLastPoint2(canvas);
+        setLastPoint3(canvas);
+    }
+
+    /**
+     * 设置最后一个点
+     *
+     * @param canvas
+     */
+    private void setLastPoint3(Canvas canvas) {
+        canvas.save();
+        canvas.translate(3 * mWidth / 5, 3 * mHeigth / 5);
+        int length = Math.min(mWidth, mHeigth) / 8;
+        mPaint.setStyle(Paint.Style.STROKE);
+        Path path = new Path();
+        RectF rectF = new RectF(0, 0, 2 * length, length);
+        path.addRect(rectF, Path.Direction.CW);//顺时针
+        path.setLastPoint(-length / 4, length + length / 2);//设置最后一个点
+        canvas.drawPath(path, mPaint);
+        mPaint.setStyle(Paint.Style.FILL);
+        canvas.drawTextOnPath("顺时针", path, 0, 30, mPaint);
+        canvas.restore();
+    }
+
+    /**
+     * 设置最后一个点
+     *
+     * @param canvas
+     */
+    private void setLastPoint2(Canvas canvas) {
+        canvas.save();
+        canvas.translate(mWidth / 8, 3 * mHeigth / 5);
+        int length = Math.min(mWidth, mHeigth) / 8;
+        mPaint.setStyle(Paint.Style.STROKE);
+        Path path = new Path();
+        RectF rectF = new RectF(0, 0, 2 * length, length);
+        path.addRect(rectF, Path.Direction.CCW);//逆时针
+        path.setLastPoint(-length / 4, length + length / 2);//设置最后一个点
+        canvas.drawPath(path, mPaint);
+        mPaint.setStyle(Paint.Style.FILL);
+        canvas.drawTextOnPath("逆时针", path, length, -20, mPaint);
+        canvas.restore();
     }
 
     /**
