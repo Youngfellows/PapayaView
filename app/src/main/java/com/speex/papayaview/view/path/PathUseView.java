@@ -76,6 +76,31 @@ public class PathUseView extends View {
 
         //绘制矩形
         drawRect(canvas);
+
+        //绘制圆角矩形
+        drawRoundRect(canvas);
+    }
+
+    /**
+     * 绘制圆角矩形
+     *
+     * @param canvas
+     */
+    private void drawRoundRect(Canvas canvas) {
+        canvas.save();
+        canvas.translate(3 * mWidth / 5, mHeigth / 2);
+        mPaint.setStyle(Paint.Style.STROKE);
+        int length = Math.min(mWidth, mHeigth) / 8;
+        Path path = new Path();
+        //绘制圆角矩形
+        RectF rectF = new RectF(0, 0, 2 * length, length);
+        path.addRoundRect(rectF, 30, 30, Path.Direction.CW);
+        canvas.drawPath(path, mPaint);
+
+        //绘制文字
+        mPaint.setStyle(Paint.Style.FILL);
+        canvas.drawTextOnPath("绘 制 圆 角 矩 形", path, 0, 40, mPaint);
+        canvas.restore();
     }
 
     /**
