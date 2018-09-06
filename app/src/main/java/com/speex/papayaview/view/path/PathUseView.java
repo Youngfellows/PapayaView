@@ -83,6 +83,120 @@ public class PathUseView extends View {
         //设置最后一个点
         setLastPoint2(canvas);
         setLastPoint3(canvas);
+
+        //addPath使用
+        addPath(canvas);
+        addPath2(canvas);
+
+        //绘制圆弧
+        drawArc(canvas);
+        drawArc2(canvas);
+
+        //拷贝路径
+        copyPath(canvas);
+    }
+
+    /**
+     * 拷贝路径
+     *
+     * @param canvas
+     */
+    private void copyPath(Canvas canvas) {
+        canvas.save();
+        canvas.translate(mWidth / 8, 14 * mHeigth / 15);  // 移动坐标系到屏幕中心
+        canvas.scale(1, -1);                         // <-- 注意 翻转y坐标轴
+
+        Path path = new Path();                     // path中添加一个圆形(圆心在坐标原点)
+        path.addCircle(0, 0, 50, Path.Direction.CW);
+
+        Path dst = new Path();                      // dst中添加一个矩形
+        dst.addRect(-200, -200, 200, 200, Path.Direction.CW);
+
+        path.offset(300, 0, dst);                     // 平移
+
+        canvas.drawPath(path, mPaint);               // 绘制path
+
+        mPaint.setColor(Color.BLUE);                // 更改画笔颜色
+
+        canvas.drawPath(dst, mPaint);
+    }
+
+    /**
+     * 绘制圆弧
+     *
+     * @param canvas
+     */
+    private void drawArc2(Canvas canvas) {
+        canvas.save();
+        canvas.translate(3 * mWidth / 5, 9 * mHeigth / 10);
+        canvas.scale(1, -1);
+        int length = Math.min(mWidth, mHeigth) / 8;
+        mPaint.setStyle(Paint.Style.STROKE);
+        Path path = new Path();
+        path.lineTo(length / 2, length / 2);
+        RectF oval = new RectF(0, 0, length, length);
+//        path.arcTo(oval, 0, 270);//连接最后一个点与圆弧起点
+        path.arcTo(oval, 0, 270, false);
+        canvas.drawPath(path, mPaint);
+        canvas.restore();
+    }
+
+    /**
+     * 绘制圆弧
+     *
+     * @param canvas
+     */
+    private void drawArc(Canvas canvas) {
+        canvas.save();
+        canvas.translate(1 * mWidth / 8, 9 * mHeigth / 10);
+        canvas.scale(1, -1);
+        int length = Math.min(mWidth, mHeigth) / 8;
+        mPaint.setStyle(Paint.Style.STROKE);
+        Path path = new Path();
+        path.lineTo(length / 2, length / 2);
+        RectF oval = new RectF(0, 0, length, length);
+//        path.addArc(oval, 0, 270);//不连接最后一个点与圆弧起点
+        path.arcTo(oval, 0, 270, true);
+        canvas.drawPath(path, mPaint);
+        canvas.restore();
+    }
+
+    private void addPath2(Canvas canvas) {
+        canvas.save();
+        canvas.translate(3 * mWidth / 5, 3 * mHeigth / 4);
+        int length = Math.min(mWidth, mHeigth) / 8;
+        mPaint.setStyle(Paint.Style.STROKE);
+        Path path = new Path();
+        path.addCircle(length / 2, length / 2, length / 2, Path.Direction.CW);
+
+        Path des = new Path();
+        RectF rectF = new RectF(0, 0, 2 * length, length);
+        des.addRect(rectF, Path.Direction.CW);//顺时针
+        path.addPath(des, -length, 0);//矩形左边平移
+
+        canvas.drawPath(path, mPaint);
+        mPaint.setStyle(Paint.Style.FILL);
+        canvas.drawTextOnPath("顺时针", des, 0, 30, mPaint);
+        canvas.restore();
+    }
+
+    private void addPath(Canvas canvas) {
+        canvas.save();
+        canvas.translate(mWidth / 8, 3 * mHeigth / 4);
+        int length = Math.min(mWidth, mHeigth) / 8;
+        mPaint.setStyle(Paint.Style.STROKE);
+        Path path = new Path();
+        RectF rectF = new RectF(0, 0, 2 * length, length);
+        path.addRect(rectF, Path.Direction.CW);//顺时针
+
+        Path src = new Path();
+        src.addCircle(length, 0, length / 2, Path.Direction.CW);
+        path.addPath(src);
+
+        canvas.drawPath(path, mPaint);
+        mPaint.setStyle(Paint.Style.FILL);
+        canvas.drawTextOnPath("顺时针", path, 0, 30, mPaint);
+        canvas.restore();
     }
 
     /**
