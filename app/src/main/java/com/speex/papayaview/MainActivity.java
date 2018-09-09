@@ -1,13 +1,15 @@
 package com.speex.papayaview;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 
 import com.speex.papayaview.activity.AlarmActivity;
 import com.speex.papayaview.activity.AlarmClockDialActivity;
+import com.speex.papayaview.activity.Bezier2Activity;
+import com.speex.papayaview.activity.Bezier3Activity;
 import com.speex.papayaview.activity.CanvasControlActivity;
 import com.speex.papayaview.activity.CanvasSaveActivity;
 import com.speex.papayaview.activity.CanvasTestActivity;
@@ -221,4 +223,27 @@ public class MainActivity extends AppCompatActivity {
         intent.setClass(this, PathUseActivity.class);
         startActivity(intent);
     }
+
+    /**
+     * 二阶贝塞尔曲线
+     *
+     * @param view
+     */
+    public void bezier2(View view) {
+        Intent intent = new Intent();
+        intent.setClass(this, Bezier2Activity.class);
+        startActivity(intent);
+    }
+    /**
+     * 三阶贝塞尔曲线
+     *
+     * @param view
+     */
+    public void bezier3(View view) {
+        Intent intent = new Intent();
+        intent.setClass(this, Bezier3Activity.class);
+        startActivity(intent);
+    }
+
+
 }

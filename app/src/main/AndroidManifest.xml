@@ -47,6 +47,10 @@
         </activity>
         <activity android:name=".activity.PathUseActivity">
         </activity>
+        <activity android:name=".activity.Bezier2Activity">
+        </activity>
+        <activity android:name=".activity.Bezier3Activity">
+        </activity>
     </application>
 
 </manifest>
