@@ -18,6 +18,7 @@ import com.speex.papayaview.activity.ClockActivity;
 import com.speex.papayaview.activity.DrawTextActivity;
 import com.speex.papayaview.activity.DrawTextOnPathActivity;
 import com.speex.papayaview.activity.DynamicPatActivity;
+import com.speex.papayaview.activity.LoveCircleActivity;
 import com.speex.papayaview.activity.PathUseActivity;
 import com.speex.papayaview.activity.PathViewActivity;
 import com.speex.papayaview.activity.PictureActivity;
@@ -234,6 +235,7 @@ public class MainActivity extends AppCompatActivity {
         intent.setClass(this, Bezier2Activity.class);
         startActivity(intent);
     }
+
     /**
      * 三阶贝塞尔曲线
      *
@@ -242,6 +244,17 @@ public class MainActivity extends AppCompatActivity {
     public void bezier3(View view) {
         Intent intent = new Intent();
         intent.setClass(this, Bezier3Activity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 三阶贝塞尔爱心圆
+     *
+     * @param view
+     */
+    public void loveCircle(View view) {
+        Intent intent = new Intent();
+        intent.setClass(this, LoveCircleActivity.class);
         startActivity(intent);
     }
 

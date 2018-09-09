@@ -152,6 +152,12 @@
                 android:onClick="bezier3"
                 android:text="三阶贝塞尔曲线"/>
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="loveCircle"
+                android:text="三阶贝塞尔爱心圆"/>
+
         </LinearLayout>
     </LinearLayout>
 
