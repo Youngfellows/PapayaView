@@ -19,6 +19,7 @@ import com.speex.papayaview.activity.DrawTextActivity;
 import com.speex.papayaview.activity.DrawTextOnPathActivity;
 import com.speex.papayaview.activity.DynamicPatActivity;
 import com.speex.papayaview.activity.LoveCircleActivity;
+import com.speex.papayaview.activity.MagicCircleActivity;
 import com.speex.papayaview.activity.PathUseActivity;
 import com.speex.papayaview.activity.PathViewActivity;
 import com.speex.papayaview.activity.PictureActivity;
@@ -258,5 +259,16 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+
+    /**
+     * 贝塞尔弹性的圆形
+     *
+     * @param view
+     */
+    public void magicCircle(View view) {
+        Intent intent = new Intent();
+        intent.setClass(this, MagicCircleActivity.class);
+        startActivity(intent);
+    }
 
 }
