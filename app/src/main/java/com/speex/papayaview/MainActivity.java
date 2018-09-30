@@ -26,6 +26,7 @@ import com.speex.papayaview.activity.PathViewActivity;
 import com.speex.papayaview.activity.PictureActivity;
 import com.speex.papayaview.activity.PieViewActivity;
 import com.speex.papayaview.activity.ScaleRulerActivity;
+import com.speex.papayaview.activity.WaterRippleActivity;
 import com.speex.papayaview.utils.ScreenSizeUtil;
 
 public class MainActivity extends AppCompatActivity {
@@ -280,6 +281,16 @@ public class MainActivity extends AppCompatActivity {
     public void magicCircle2(View view) {
         Intent intent = new Intent();
         intent.setClass(this, MagicActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 水波纹
+     *
+     * @param view
+     */
+    public void waterRipple(View view) {
+        Intent intent = new Intent(this, WaterRippleActivity.class);
         startActivity(intent);
     }
 

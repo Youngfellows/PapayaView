@@ -176,6 +176,13 @@
                 android:onClick="magicCircle2"
                 android:text="弹性圆"/>
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="waterRipple"
+                android:text="水波纹"/>
+
+
         </LinearLayout>
 
     </LinearLayout>
