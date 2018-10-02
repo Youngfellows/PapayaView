@@ -27,6 +27,7 @@ import com.speex.papayaview.activity.PathViewActivity;
 import com.speex.papayaview.activity.PictureActivity;
 import com.speex.papayaview.activity.PieViewActivity;
 import com.speex.papayaview.activity.ScaleRulerActivity;
+import com.speex.papayaview.activity.ViewPagerActivity;
 import com.speex.papayaview.activity.WaterRippleActivity;
 import com.speex.papayaview.utils.ScreenSizeUtil;
 
@@ -302,6 +303,16 @@ public class MainActivity extends AppCompatActivity {
      */
     public void useRecycler(View view) {
         Intent intent = new Intent(this, RecyclerActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * ViewPager轮播图
+     *
+     * @param view
+     */
+    public void useViewPager(View view) {
+        Intent intent = new Intent(this, ViewPagerActivity.class);
         startActivity(intent);
     }
 

@@ -188,8 +188,14 @@
                 android:onClick="useRecycler"
                 android:text="RV列表"/>
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="useViewPager"
+                android:text="轮播图"/>
 
         </LinearLayout>
+
 
     </LinearLayout>
 
