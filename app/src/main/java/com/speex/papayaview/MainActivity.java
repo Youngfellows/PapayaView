@@ -13,6 +13,7 @@ import com.speex.papayaview.activity.Bezier3Activity;
 import com.speex.papayaview.activity.CanvasControlActivity;
 import com.speex.papayaview.activity.CanvasSaveActivity;
 import com.speex.papayaview.activity.CanvasTestActivity;
+import com.speex.papayaview.activity.RecyclerActivity;
 import com.speex.papayaview.activity.CheckActivity;
 import com.speex.papayaview.activity.ClockActivity;
 import com.speex.papayaview.activity.DrawTextActivity;
@@ -294,5 +295,14 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    /**
+     * Recycler列表
+     *
+     * @param view
+     */
+    public void useRecycler(View view) {
+        Intent intent = new Intent(this, RecyclerActivity.class);
+        startActivity(intent);
+    }
 
 }

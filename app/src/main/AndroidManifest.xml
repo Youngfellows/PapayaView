@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.speex.papayaview">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:hardwareAccelerated="false"
@@ -58,6 +59,8 @@
         <activity android:name=".activity.MagicActivity">
         </activity>
         <activity android:name=".activity.WaterRippleActivity">
+        </activity>
+        <activity android:name=".activity.RecyclerActivity">
         </activity>
     </application>
 
