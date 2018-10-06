@@ -211,6 +211,12 @@
                 android:layout_height="wrap_content"
                 android:onClick="usePath3"
                 android:text="Path使用3"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="pathMeasure"
+                android:text="Path测量"/>
         </LinearLayout>
     </LinearLayout>
 

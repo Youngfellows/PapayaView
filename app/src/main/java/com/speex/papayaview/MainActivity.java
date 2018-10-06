@@ -21,6 +21,7 @@ import com.speex.papayaview.activity.DynamicPatActivity;
 import com.speex.papayaview.activity.LoveCircleActivity;
 import com.speex.papayaview.activity.MagicActivity;
 import com.speex.papayaview.activity.MagicCircleActivity;
+import com.speex.papayaview.activity.PathMeasureActivity;
 import com.speex.papayaview.activity.PathUseActivity;
 import com.speex.papayaview.activity.PathViewActivity;
 import com.speex.papayaview.activity.PictureActivity;
@@ -330,6 +331,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void usePath3(View view) {
         Intent intent = new Intent(this, UsePath3Activity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * path测量使用
+     *
+     * @param view
+     */
+    public void pathMeasure(View view) {
+        Intent intent = new Intent(this, PathMeasureActivity.class);
         startActivity(intent);
     }
 
