@@ -196,7 +196,22 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="usePath2"
+                android:text="Path使用2"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="usePath3"
+                android:text="Path使用3"/>
+        </LinearLayout>
     </LinearLayout>
 
 </ScrollView>

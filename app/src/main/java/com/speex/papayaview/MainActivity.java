@@ -13,7 +13,6 @@ import com.speex.papayaview.activity.Bezier3Activity;
 import com.speex.papayaview.activity.CanvasControlActivity;
 import com.speex.papayaview.activity.CanvasSaveActivity;
 import com.speex.papayaview.activity.CanvasTestActivity;
-import com.speex.papayaview.activity.RecyclerActivity;
 import com.speex.papayaview.activity.CheckActivity;
 import com.speex.papayaview.activity.ClockActivity;
 import com.speex.papayaview.activity.DrawTextActivity;
@@ -26,7 +25,10 @@ import com.speex.papayaview.activity.PathUseActivity;
 import com.speex.papayaview.activity.PathViewActivity;
 import com.speex.papayaview.activity.PictureActivity;
 import com.speex.papayaview.activity.PieViewActivity;
+import com.speex.papayaview.activity.RecyclerActivity;
 import com.speex.papayaview.activity.ScaleRulerActivity;
+import com.speex.papayaview.activity.UsePath2Activity;
+import com.speex.papayaview.activity.UsePath3Activity;
 import com.speex.papayaview.activity.ViewPagerActivity;
 import com.speex.papayaview.activity.WaterRippleActivity;
 import com.speex.papayaview.utils.ScreenSizeUtil;
@@ -313,6 +315,21 @@ public class MainActivity extends AppCompatActivity {
      */
     public void useViewPager(View view) {
         Intent intent = new Intent(this, ViewPagerActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * Path使用二
+     *
+     * @param view
+     */
+    public void usePath2(View view) {
+        Intent intent = new Intent(this, UsePath2Activity.class);
+        startActivity(intent);
+    }
+
+    public void usePath3(View view) {
+        Intent intent = new Intent(this, UsePath3Activity.class);
         startActivity(intent);
     }
 

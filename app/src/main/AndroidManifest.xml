@@ -65,6 +65,10 @@
         </activity>
         <activity android:name=".activity.ViewPagerActivity">
         </activity>
+        <activity android:name=".activity.UsePath2Activity">
+        </activity>
+        <activity android:name=".activity.UsePath3Activity">
+        </activity>
     </application>
 
 </manifest>
