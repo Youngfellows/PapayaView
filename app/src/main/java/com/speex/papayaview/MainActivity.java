@@ -28,6 +28,7 @@ import com.speex.papayaview.activity.PictureActivity;
 import com.speex.papayaview.activity.PieViewActivity;
 import com.speex.papayaview.activity.RecyclerActivity;
 import com.speex.papayaview.activity.ScaleRulerActivity;
+import com.speex.papayaview.activity.SearchViewActivity;
 import com.speex.papayaview.activity.UsePath2Activity;
 import com.speex.papayaview.activity.UsePath3Activity;
 import com.speex.papayaview.activity.ViewPagerActivity;
@@ -341,6 +342,16 @@ public class MainActivity extends AppCompatActivity {
      */
     public void pathMeasure(View view) {
         Intent intent = new Intent(this, PathMeasureActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 放大镜
+     *
+     * @param view
+     */
+    public void searchView(View view) {
+        Intent intent = new Intent(this, SearchViewActivity.class);
         startActivity(intent);
     }
 

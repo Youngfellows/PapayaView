@@ -217,6 +217,12 @@
                 android:layout_height="wrap_content"
                 android:onClick="pathMeasure"
                 android:text="Path测量"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="searchView"
+                android:text="放大镜"/>
         </LinearLayout>
     </LinearLayout>
 

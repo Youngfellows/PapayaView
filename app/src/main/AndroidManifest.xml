@@ -71,6 +71,8 @@
         </activity>
         <activity android:name=".activity.PathMeasureActivity">
         </activity>
+        <activity android:name=".activity.SearchViewActivity">
+        </activity>
     </application>
 
 </manifest>
