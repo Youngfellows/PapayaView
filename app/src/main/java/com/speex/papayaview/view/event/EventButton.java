@@ -54,6 +54,9 @@ public class EventButton extends Button {
     @Override
     public boolean dispatchTouchEvent(MotionEvent event) {
         Log.d(TAG, "dispatchTouchEvent: " + event.getAction());
+        //阻止ViewGroup对子View的DOWN,MOVE或者UP事件进行拦截
+//        getParent().requestDisallowInterceptTouchEvent(true);
+
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 Log.d(TAG, "dispatchTouchEvent ACTION_DOWN");
