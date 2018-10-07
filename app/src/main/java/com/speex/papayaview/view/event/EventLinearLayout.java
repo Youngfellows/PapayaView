@@ -84,9 +84,9 @@ public class EventLinearLayout extends LinearLayout {
             case MotionEvent.ACTION_MOVE:
                 Log.d(TAG, "onInterceptTouchEvent ACTION_MOVE");
                 //如果你觉得需要拦截
-                Log.d(TAG, "ViewGroup拦截了move事件,move事件不分发给子view处理,ViewGroup自己的onTouchEvent处理");
-                return true;
-//                break;
+//                Log.d(TAG, "ViewGroup拦截了move事件,move事件不分发给子view处理,ViewGroup自己的onTouchEvent处理");
+//                return true;
+                break;
             case MotionEvent.ACTION_UP:
                 Log.d(TAG, "onInterceptTouchEvent ACTION_UP");
                 //如果你觉得需要拦截

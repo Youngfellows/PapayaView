@@ -53,7 +53,8 @@ public class EventDispatchActivity extends AppCompatActivity {
                     default:
                         break;
                 }
-                return false;
+//                return true;//自己消费Touch事件,不执行View的onTouchEvent
+                return false;//自己不消费Touch事件,执行View的onTouchEvent
             }
         });
     }
