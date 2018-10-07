@@ -18,6 +18,7 @@ import com.speex.papayaview.activity.ClockActivity;
 import com.speex.papayaview.activity.DrawTextActivity;
 import com.speex.papayaview.activity.DrawTextOnPathActivity;
 import com.speex.papayaview.activity.DynamicPatActivity;
+import com.speex.papayaview.activity.EventDispatchActivity;
 import com.speex.papayaview.activity.LoveCircleActivity;
 import com.speex.papayaview.activity.MagicActivity;
 import com.speex.papayaview.activity.MagicCircleActivity;
@@ -34,14 +35,18 @@ import com.speex.papayaview.activity.UsePath3Activity;
 import com.speex.papayaview.activity.ViewPagerActivity;
 import com.speex.papayaview.activity.WaterRippleActivity;
 import com.speex.papayaview.utils.ScreenSizeUtil;
+import com.speex.papayaview.view.event.EventButton;
 
 public class MainActivity extends AppCompatActivity {
     private String TAG = this.getClass().getSimpleName();
+    private EventButton mEventButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+//        initDispatchEvent();
     }
 
     @Override
@@ -352,6 +357,16 @@ public class MainActivity extends AppCompatActivity {
      */
     public void searchView(View view) {
         Intent intent = new Intent(this, SearchViewActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 事件分发
+     *
+     * @param view
+     */
+    public void eventDispatch(View view) {
+        Intent intent = new Intent(this, EventDispatchActivity.class);
         startActivity(intent);
     }
 
