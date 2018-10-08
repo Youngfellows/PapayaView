@@ -235,6 +235,12 @@
                 android:onClick="eventDispatch"
                 android:text="事件分发"/>
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="gestureBall"
+                android:text="手势在圆形区域"/>
+
         </LinearLayout>
     </LinearLayout>
 

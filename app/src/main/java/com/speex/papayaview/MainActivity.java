@@ -19,6 +19,7 @@ import com.speex.papayaview.activity.DrawTextActivity;
 import com.speex.papayaview.activity.DrawTextOnPathActivity;
 import com.speex.papayaview.activity.DynamicPatActivity;
 import com.speex.papayaview.activity.EventDispatchActivity;
+import com.speex.papayaview.activity.Gesture1Activity;
 import com.speex.papayaview.activity.LoveCircleActivity;
 import com.speex.papayaview.activity.MagicActivity;
 import com.speex.papayaview.activity.MagicCircleActivity;
@@ -367,6 +368,16 @@ public class MainActivity extends AppCompatActivity {
      */
     public void eventDispatch(View view) {
         Intent intent = new Intent(this, EventDispatchActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 手势是否在圆形区域
+     *
+     * @param view
+     */
+    public void gestureBall(View view) {
+        Intent intent = new Intent(this, Gesture1Activity.class);
         startActivity(intent);
     }
 
