@@ -15,6 +15,7 @@ import com.speex.papayaview.activity.CanvasSaveActivity;
 import com.speex.papayaview.activity.CanvasTestActivity;
 import com.speex.papayaview.activity.CheckActivity;
 import com.speex.papayaview.activity.ClockActivity;
+import com.speex.papayaview.activity.CoordinateSpaceActivity;
 import com.speex.papayaview.activity.DrawTextActivity;
 import com.speex.papayaview.activity.DrawTextOnPathActivity;
 import com.speex.papayaview.activity.DynamicPatActivity;
@@ -378,6 +379,16 @@ public class MainActivity extends AppCompatActivity {
      */
     public void gestureBall(View view) {
         Intent intent = new Intent(this, Gesture1Activity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 手势触摸的坐标系与画布坐标系不统一
+     *
+     * @param view
+     */
+    public void coordinateSpace(View view) {
+        Intent intent = new Intent(this, CoordinateSpaceActivity.class);
         startActivity(intent);
     }
 

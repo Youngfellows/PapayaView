@@ -77,6 +77,8 @@
         </activity>
         <activity android:name=".activity.Gesture1Activity">
         </activity>
+        <activity android:name=".activity.CoordinateSpaceActivity">
+        </activity>
     </application>
 
 </manifest>

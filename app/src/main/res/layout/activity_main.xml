@@ -241,6 +241,12 @@
                 android:onClick="gestureBall"
                 android:text="手势在圆形区域"/>
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="coordinateSpace"
+                android:text="手指触摸的坐标系和画布坐标系不统一"/>
+
         </LinearLayout>
     </LinearLayout>
 
