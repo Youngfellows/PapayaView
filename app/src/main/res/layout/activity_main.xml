@@ -248,6 +248,17 @@
                 android:text="手指触摸的坐标系和画布坐标系不统一"/>
 
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="remoteControl"
+                android:text="遥控器"/>
+        </LinearLayout>
     </LinearLayout>
 
 </ScrollView>

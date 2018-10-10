@@ -30,6 +30,7 @@ import com.speex.papayaview.activity.PathViewActivity;
 import com.speex.papayaview.activity.PictureActivity;
 import com.speex.papayaview.activity.PieViewActivity;
 import com.speex.papayaview.activity.RecyclerActivity;
+import com.speex.papayaview.activity.RemoteControlActivity;
 import com.speex.papayaview.activity.ScaleRulerActivity;
 import com.speex.papayaview.activity.SearchViewActivity;
 import com.speex.papayaview.activity.UsePath2Activity;
@@ -389,6 +390,16 @@ public class MainActivity extends AppCompatActivity {
      */
     public void coordinateSpace(View view) {
         Intent intent = new Intent(this, CoordinateSpaceActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 遥控器按钮
+     *
+     * @param view
+     */
+    public void remoteControl(View view) {
+        Intent intent = new Intent(this, RemoteControlActivity.class);
         startActivity(intent);
     }
 
