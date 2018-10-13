@@ -258,6 +258,12 @@
                 android:layout_height="wrap_content"
                 android:onClick="remoteControl"
                 android:text="遥控器"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="multiTouch"
+                android:text="多点触控"/>
         </LinearLayout>
     </LinearLayout>
 

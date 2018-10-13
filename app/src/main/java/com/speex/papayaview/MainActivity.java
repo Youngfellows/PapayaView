@@ -24,6 +24,7 @@ import com.speex.papayaview.activity.Gesture1Activity;
 import com.speex.papayaview.activity.LoveCircleActivity;
 import com.speex.papayaview.activity.MagicActivity;
 import com.speex.papayaview.activity.MagicCircleActivity;
+import com.speex.papayaview.activity.MultiTouchActivity;
 import com.speex.papayaview.activity.PathMeasureActivity;
 import com.speex.papayaview.activity.PathUseActivity;
 import com.speex.papayaview.activity.PathViewActivity;
@@ -400,6 +401,16 @@ public class MainActivity extends AppCompatActivity {
      */
     public void remoteControl(View view) {
         Intent intent = new Intent(this, RemoteControlActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 多点触控
+     *
+     * @param view
+     */
+    public void multiTouch(View view) {
+        Intent intent = new Intent(this, MultiTouchActivity.class);
         startActivity(intent);
     }
 

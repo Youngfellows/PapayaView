@@ -81,6 +81,8 @@
         </activity>
         <activity android:name=".activity.RemoteControlActivity">
         </activity>
+        <activity android:name=".activity.MultiTouchActivity">
+        </activity>
     </application>
 
 </manifest>
