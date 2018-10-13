@@ -264,6 +264,12 @@
                 android:layout_height="wrap_content"
                 android:onClick="multiTouch"
                 android:text="多点触控"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="dragView"
+                android:text="多指拖动图片"/>
         </LinearLayout>
     </LinearLayout>
 

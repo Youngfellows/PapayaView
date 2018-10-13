@@ -16,6 +16,7 @@ import com.speex.papayaview.activity.CanvasTestActivity;
 import com.speex.papayaview.activity.CheckActivity;
 import com.speex.papayaview.activity.ClockActivity;
 import com.speex.papayaview.activity.CoordinateSpaceActivity;
+import com.speex.papayaview.activity.DragViewActivity;
 import com.speex.papayaview.activity.DrawTextActivity;
 import com.speex.papayaview.activity.DrawTextOnPathActivity;
 import com.speex.papayaview.activity.DynamicPatActivity;
@@ -411,6 +412,16 @@ public class MainActivity extends AppCompatActivity {
      */
     public void multiTouch(View view) {
         Intent intent = new Intent(this, MultiTouchActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 多指拖动图片
+     *
+     * @param view
+     */
+    public void dragView(View view) {
+        Intent intent = new Intent(this, DragViewActivity.class);
         startActivity(intent);
     }
 
