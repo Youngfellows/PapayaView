@@ -282,6 +282,12 @@
                 android:onClick="dragBall"
                 android:text="手势(拖动的球)"/>
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="scalePhoto"
+                android:text="图片缩放"/>
+
         </LinearLayout>
     </LinearLayout>
 

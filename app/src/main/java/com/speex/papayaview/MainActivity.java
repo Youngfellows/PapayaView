@@ -30,6 +30,7 @@ import com.speex.papayaview.activity.MultiTouchActivity;
 import com.speex.papayaview.activity.PathMeasureActivity;
 import com.speex.papayaview.activity.PathUseActivity;
 import com.speex.papayaview.activity.PathViewActivity;
+import com.speex.papayaview.activity.PhotoScaleActivity;
 import com.speex.papayaview.activity.PictureActivity;
 import com.speex.papayaview.activity.PieViewActivity;
 import com.speex.papayaview.activity.RecyclerActivity;
@@ -433,6 +434,16 @@ public class MainActivity extends AppCompatActivity {
      */
     public void dragBall(View view) {
         Intent intent = new Intent(this, DragBallActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 图片缩放
+     *
+     * @param view
+     */
+    public void scalePhoto(View view) {
+        Intent intent = new Intent(this, PhotoScaleActivity.class);
         startActivity(intent);
     }
 
