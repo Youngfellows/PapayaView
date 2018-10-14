@@ -16,6 +16,7 @@ import com.speex.papayaview.activity.CanvasTestActivity;
 import com.speex.papayaview.activity.CheckActivity;
 import com.speex.papayaview.activity.ClockActivity;
 import com.speex.papayaview.activity.CoordinateSpaceActivity;
+import com.speex.papayaview.activity.DragBallActivity;
 import com.speex.papayaview.activity.DragViewActivity;
 import com.speex.papayaview.activity.DrawTextActivity;
 import com.speex.papayaview.activity.DrawTextOnPathActivity;
@@ -422,6 +423,16 @@ public class MainActivity extends AppCompatActivity {
      */
     public void dragView(View view) {
         Intent intent = new Intent(this, DragViewActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 拖动的小球
+     *
+     * @param view
+     */
+    public void dragBall(View view) {
+        Intent intent = new Intent(this, DragBallActivity.class);
         startActivity(intent);
     }
 

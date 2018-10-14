@@ -85,6 +85,8 @@
         </activity>
         <activity android:name=".activity.DragViewActivity">
         </activity>
+        <activity android:name=".activity.DragBallActivity">
+        </activity>
     </application>
 
 </manifest>

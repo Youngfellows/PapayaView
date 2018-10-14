@@ -271,6 +271,18 @@
                 android:onClick="dragView"
                 android:text="多指拖动图片"/>
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="dragBall"
+                android:text="手势(拖动的球)"/>
+
+        </LinearLayout>
     </LinearLayout>
 
 </ScrollView>
