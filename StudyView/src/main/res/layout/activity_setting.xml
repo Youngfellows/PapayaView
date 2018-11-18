@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ccc"
+    android:orientation="vertical"
+    tools:context="com.speex.studyview.aty.SettingActivity">
+
+    <com.speex.studyview.view.SettingItemView
+        android:id="@+id/siv_item1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:Img="@mipmap/right"
+        app:LeftText="纲手"
+        app:RightText="大蛞蝓">
+    </com.speex.studyview.view.SettingItemView>
+
+    <com.speex.studyview.view.SettingItemView
+        android:id="@+id/siv_item2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:Img="@mipmap/right"
+        app:LeftText="自来也"
+        app:RightText="蛤蟆吉">
+    </com.speex.studyview.view.SettingItemView>
+
+    <com.speex.studyview.view.SettingItemView
+        android:id="@+id/siv_item3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:Img="@mipmap/right"
+        app:LeftText="大蛇丸"
+        app:RightText="万蛇">
+    </com.speex.studyview.view.SettingItemView>
+
+    <com.speex.studyview.view.SettingItemView
+        android:id="@+id/siv_item4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:Img="@mipmap/right"
+        app:LeftText="猿飞日斩"
+        app:RightText="猿猴王·猿魔">
+    </com.speex.studyview.view.SettingItemView>
+
+</LinearLayout>

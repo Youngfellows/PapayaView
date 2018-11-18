@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--命名空间的名字-->
+    <declare-styleable name="SettingItemView">
+        <attr name="LeftText" format="string"/>
+        <attr name="RightText" format="string"/>
+        <attr name="Img" format="reference"/>
+    </declare-styleable>
+</resources>
