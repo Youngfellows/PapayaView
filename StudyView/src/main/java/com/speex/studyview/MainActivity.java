@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.speex.studyview.aty.FlowLayoutActivity;
 import com.speex.studyview.aty.SettingActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -24,4 +25,16 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, SettingActivity.class);
         startActivity(intent);
     }
+
+    /**
+     * 组合式控件2
+     *
+     * @param view
+     */
+    public void flowLayout(View view) {
+        Intent intent = new Intent(this, FlowLayoutActivity.class);
+        startActivity(intent);
+    }
+
+
 }

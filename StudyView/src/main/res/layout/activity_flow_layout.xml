@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.speex.studyview.aty.FlowLayoutActivity">
+
+    <com.speex.studyview.view.FlowLayout
+        android:id="@+id/fl_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.speex.studyview.view.FlowLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:onClick="add"
+        android:text="添加一个"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:onClick="delete"
+        android:text="减少一个"/>
+
+
+    <!--<com.speex.studyview.view.FlowLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@color/colorPrimary">-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="#f00"-->
+    <!--android:text="1111"-->
+    <!--android:textColor="#fff"-->
+    <!--android:textSize="15sp"/>-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="#0f0"-->
+    <!--android:text="23232323232"-->
+    <!--android:textColor="#fff"-->
+    <!--android:textSize="15sp"/>-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="#f00"-->
+    <!--android:text="222222"-->
+    <!--android:textColor="#fff"-->
+    <!--android:textSize="15sp"/>-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="#0f0"-->
+    <!--android:text="333333"-->
+    <!--android:textColor="#fff"-->
+    <!--android:textSize="15sp"/>-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="#f00"-->
+    <!--android:text="444"-->
+    <!--android:textColor="#fff"-->
+    <!--android:textSize="15sp"/>-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="#0f0"-->
+    <!--android:text="55555555555"-->
+    <!--android:textColor="#fff"-->
+    <!--android:textSize="15sp"/>-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="#f00"-->
+    <!--android:text="6666666666666"-->
+    <!--android:textColor="#fff"-->
+    <!--android:textSize="15sp"/>-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="#0f0"-->
+    <!--android:text="7777777777777777"-->
+    <!--android:textColor="#fff"-->
+    <!--android:textSize="15sp"/>-->
+
+    <!--</com.speex.studyview.view.FlowLayout>-->
+
+</RelativeLayout>
