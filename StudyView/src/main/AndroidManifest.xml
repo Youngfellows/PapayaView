@@ -20,6 +20,8 @@
         </activity>
         <activity android:name=".aty.FlowLayoutActivity">
         </activity>
+        <activity android:name=".aty.RectProgressActivity">
+        </activity>
     </application>
 
 </manifest>

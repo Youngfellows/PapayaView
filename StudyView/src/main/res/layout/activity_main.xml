@@ -27,6 +27,12 @@
                 android:layout_height="wrap_content"
                 android:onClick="flowLayout"
                 android:text="组合式控件2"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="rectProgress"
+                android:text="矩形进度框"/>
         </LinearLayout>
 
     </LinearLayout>
