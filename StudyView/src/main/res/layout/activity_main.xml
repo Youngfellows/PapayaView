@@ -62,6 +62,12 @@
                 android:layout_height="wrap_content"
                 android:onClick="viewGroup3"
                 android:text="自定义ViewGroup3"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="randomNumber"
+                android:text="点击刷新4位随机数"/>
         </LinearLayout>
 
     </LinearLayout>

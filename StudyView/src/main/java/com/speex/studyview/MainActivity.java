@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.speex.studyview.aty.FlowLayoutActivity;
+import com.speex.studyview.aty.RandomNumberActivity;
 import com.speex.studyview.aty.RectProgressActivity;
 import com.speex.studyview.aty.SettingActivity;
 import com.speex.studyview.aty.ViewGroup1Activity;
@@ -62,6 +63,17 @@ public class MainActivity extends AppCompatActivity {
 
     public void viewGroup3(View view) {
         Intent intent = new Intent(this, ViewGruop3Activity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 自定义属性
+     * 点击刷新四位随机数
+     *
+     * @param view
+     */
+    public void randomNumber(View view) {
+        Intent intent = new Intent(this, RandomNumberActivity.class);
         startActivity(intent);
     }
 
