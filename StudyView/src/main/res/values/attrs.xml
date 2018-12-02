@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!--定义属性-->
+    <attr name="titleText" format="string"/>
+    <attr name="titleTextColor" format="color"/>
+    <attr name="titleTextSize" format="dimension"/>
+
+    <attr name="imageSrc" format="reference"/>
+    <attr name="imageScalType">
+        <enum name="fillXY" value="0"/>
+        <enum name="center" value="1"/>
+    </attr>
+
     <!--命名空间的名字-->
     <declare-styleable name="SettingItemView">
         <attr name="LeftText" format="string"/>
@@ -8,9 +19,19 @@
         <attr name="Img" format="reference"/>
     </declare-styleable>
 
+    <!--随机数属性-->
     <declare-styleable name="RandomNumberView">
-        <attr name="titleText" format="string"/>
-        <attr name="titleTextColor" format="color"/>
-        <attr name="titleTextSize" format="dimension"/>
+        <attr name="titleText"/>
+        <attr name="titleTextColor"/>
+        <attr name="titleTextSize"/>
+    </declare-styleable>
+
+    <!--带文字的图片属性-->
+    <declare-styleable name="TextImageView">
+        <attr name="titleText"/>
+        <attr name="titleTextColor"/>
+        <attr name="titleTextSize"/>
+        <attr name="imageSrc"/>
+        <attr name="imageScalType"/>
     </declare-styleable>
 </resources>

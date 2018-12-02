@@ -30,6 +30,8 @@
         </activity>
         <activity android:name=".aty.RandomNumberActivity">
         </activity>
+        <activity android:name=".aty.TextImageActivity">
+        </activity>
     </application>
 
 </manifest>

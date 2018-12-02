@@ -9,6 +9,7 @@ import com.speex.studyview.aty.FlowLayoutActivity;
 import com.speex.studyview.aty.RandomNumberActivity;
 import com.speex.studyview.aty.RectProgressActivity;
 import com.speex.studyview.aty.SettingActivity;
+import com.speex.studyview.aty.TextImageActivity;
 import com.speex.studyview.aty.ViewGroup1Activity;
 import com.speex.studyview.aty.ViewGroup2Activity;
 import com.speex.studyview.aty.ViewGruop3Activity;
@@ -74,6 +75,16 @@ public class MainActivity extends AppCompatActivity {
      */
     public void randomNumber(View view) {
         Intent intent = new Intent(this, RandomNumberActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 带文字的图片
+     *
+     * @param view
+     */
+    public void textImage(View view) {
+        Intent intent = new Intent(this, TextImageActivity.class);
         startActivity(intent);
     }
 

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.speex.studyview.aty.TextImageActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.speex.studyview.view.TextImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:padding="10dp"
+            app:imageScalType="center"
+            app:imageSrc="@mipmap/ic_launcher"
+            app:titleText="你好谷歌"
+            app:titleTextColor="@android:color/holo_red_light"
+            app:titleTextSize="20sp"/>
+
+        <com.speex.studyview.view.TextImageView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:padding="10dp"
+            app:imageScalType="center"
+            app:imageSrc="@mipmap/ic_launcher"
+            app:titleText="大幂幂晚饭后小树林"
+            app:titleTextColor="@android:color/holo_red_light"
+            app:titleTextSize="20sp"/>
+
+        <com.speex.studyview.view.TextImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_margin="15dp"
+            android:padding="10dp"
+            app:imageScalType="fillXY"
+            app:imageSrc="@mipmap/mm01"
+            app:titleText="妹子,丝袜不错呦"
+            app:titleTextColor="@android:color/holo_red_light"
+            app:titleTextSize="13sp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
