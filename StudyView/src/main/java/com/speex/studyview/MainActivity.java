@@ -8,6 +8,9 @@ import android.view.View;
 import com.speex.studyview.aty.FlowLayoutActivity;
 import com.speex.studyview.aty.RectProgressActivity;
 import com.speex.studyview.aty.SettingActivity;
+import com.speex.studyview.aty.ViewGroup1Activity;
+import com.speex.studyview.aty.ViewGroup2Activity;
+import com.speex.studyview.aty.ViewGruop3Activity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -44,6 +47,21 @@ public class MainActivity extends AppCompatActivity {
      */
     public void rectProgress(View view) {
         Intent intent = new Intent(this, RectProgressActivity.class);
+        startActivity(intent);
+    }
+
+    public void viewGroup1(View view) {
+        Intent intent = new Intent(this, ViewGroup1Activity.class);
+        startActivity(intent);
+    }
+
+    public void viewGroup2(View view) {
+        Intent intent = new Intent(this, ViewGroup2Activity.class);
+        startActivity(intent);
+    }
+
+    public void viewGroup3(View view) {
+        Intent intent = new Intent(this, ViewGruop3Activity.class);
         startActivity(intent);
     }
 
