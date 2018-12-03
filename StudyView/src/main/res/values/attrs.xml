@@ -34,4 +34,14 @@
         <attr name="imageSrc"/>
         <attr name="imageScalType"/>
     </declare-styleable>
+
+    <!--环形进度条-->
+    <declare-styleable name="ProgressBarView">
+        <attr name="circleWidth" format="dimension"/>
+        <attr name="progressColor" format="color"/>
+        <attr name="backgroundColor" format="color"/>
+        <attr name="textColor" format="color"/>
+        <attr name="textSize" format="dimension"/>
+        <attr name="speed" format="integer"/>
+    </declare-styleable>
 </resources>

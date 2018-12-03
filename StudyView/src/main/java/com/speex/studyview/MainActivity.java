@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.speex.studyview.aty.FlowLayoutActivity;
+import com.speex.studyview.aty.ProgressActivity;
 import com.speex.studyview.aty.RandomNumberActivity;
 import com.speex.studyview.aty.RectProgressActivity;
 import com.speex.studyview.aty.SettingActivity;
@@ -85,6 +86,16 @@ public class MainActivity extends AppCompatActivity {
      */
     public void textImage(View view) {
         Intent intent = new Intent(this, TextImageActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 环形进度
+     *
+     * @param view
+     */
+    public void circleProgress(View view) {
+        Intent intent = new Intent(this, ProgressActivity.class);
         startActivity(intent);
     }
 
