@@ -85,6 +85,12 @@
                 android:layout_height="wrap_content"
                 android:onClick="circleProgress"
                 android:text="环形进度"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="volumeControl"
+                android:text="声音控制"/>
         </LinearLayout>
 
     </LinearLayout>

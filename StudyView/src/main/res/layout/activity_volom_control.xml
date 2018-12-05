@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.speex.studyview.aty.VolomControlActivity">
+
+    <com.speex.studyview.view.VolumControlView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@android:color/darker_gray"
+        android:padding="20dp"
+        app:backgroundColor="@android:color/holo_red_light"
+        app:centerPic="@mipmap/ic_launcher"
+        app:centralAngle="300"
+        app:circleWidth="8px"
+        app:dotCount="15"
+        app:progressColor="@android:color/holo_blue_light"
+        app:spliteSize="15"
+        app:textColor="@android:color/white"
+        app:textSize="15sp"
+        app:textVisible="true"/>
+
+</RelativeLayout>

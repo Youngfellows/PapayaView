@@ -14,6 +14,7 @@ import com.speex.studyview.aty.TextImageActivity;
 import com.speex.studyview.aty.ViewGroup1Activity;
 import com.speex.studyview.aty.ViewGroup2Activity;
 import com.speex.studyview.aty.ViewGruop3Activity;
+import com.speex.studyview.aty.VolomControlActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -96,6 +97,16 @@ public class MainActivity extends AppCompatActivity {
      */
     public void circleProgress(View view) {
         Intent intent = new Intent(this, ProgressActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 声音控制
+     *
+     * @param view
+     */
+    public void volumeControl(View view) {
+        Intent intent = new Intent(this, VolomControlActivity.class);
         startActivity(intent);
     }
 
