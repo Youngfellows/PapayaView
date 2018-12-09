@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.speex.studyview.aty.FiveRingsActivity">
+
+    <com.speex.studyview.view.FiveRingsView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:background="@android:color/darker_gray">
+
+        <com.speex.studyview.view.ColorCircleView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:circle_color="#3F51B5"
+            app:stroke_width="5dp"/>
+
+        <com.speex.studyview.view.ColorCircleView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:circle_color="#000000"
+            app:stroke_width="5dp"/>
+
+        <com.speex.studyview.view.ColorCircleView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:circle_color="#ff3c00"
+            app:stroke_width="5dp"/>
+
+        <com.speex.studyview.view.ColorCircleView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:circle_color="#fcb840"
+            app:stroke_width="5dp"/>
+
+        <com.speex.studyview.view.ColorCircleView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:circle_color="#24ff00"
+            app:stroke_width="5dp"/>
+
+    </com.speex.studyview.view.FiveRingsView>
+
+
+</RelativeLayout>

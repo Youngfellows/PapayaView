@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.speex.studyview.aty.CakeActivity;
+import com.speex.studyview.aty.FiveRingsActivity;
 import com.speex.studyview.aty.FlowLayoutActivity;
 import com.speex.studyview.aty.ProgressActivity;
 import com.speex.studyview.aty.RandomNumberActivity;
@@ -119,6 +120,15 @@ public class MainActivity extends AppCompatActivity {
      */
     public void cakeView(View view) {
         Intent intent = new Intent(this, CakeActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 奥运五环
+     * @param view
+     */
+    public void fiveRings(View view) {
+        Intent intent = new Intent(this, FiveRingsActivity.class);
         startActivity(intent);
     }
 

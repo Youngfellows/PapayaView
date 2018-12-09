@@ -71,4 +71,10 @@
         <attr name="centerPic"/>
         <attr name="centralAngle"/>
     </declare-styleable>
+
+    <!--圆形-->
+    <declare-styleable name="ColorCircleView">
+        <attr name="circle_color" format="color"/>
+        <attr name="stroke_width" format="dimension"/>
+    </declare-styleable>
 </resources>

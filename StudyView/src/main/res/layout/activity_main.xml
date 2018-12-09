@@ -102,6 +102,12 @@
                 android:layout_height="wrap_content"
                 android:onClick="cakeView"
                 android:text="饼状图"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="fiveRings"
+                android:text="奥运五环"/>
         </LinearLayout>
 
     </LinearLayout>
