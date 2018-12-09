@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.speex.studyview.aty.CakeActivity;
 import com.speex.studyview.aty.FlowLayoutActivity;
 import com.speex.studyview.aty.ProgressActivity;
 import com.speex.studyview.aty.RandomNumberActivity;
@@ -110,5 +111,15 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+
+    /**
+     * 饼状图
+     *
+     * @param view
+     */
+    public void cakeView(View view) {
+        Intent intent = new Intent(this, CakeActivity.class);
+        startActivity(intent);
+    }
 
 }

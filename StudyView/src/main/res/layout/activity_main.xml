@@ -93,6 +93,17 @@
                 android:text="声音控制"/>
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="cakeView"
+                android:text="饼状图"/>
+        </LinearLayout>
+
     </LinearLayout>
 
 </ScrollView>

@@ -36,6 +36,8 @@
         </activity>
         <activity android:name=".aty.VolomControlActivity">
         </activity>
+        <activity android:name=".aty.CakeActivity">
+        </activity>
     </application>
 
 </manifest>
