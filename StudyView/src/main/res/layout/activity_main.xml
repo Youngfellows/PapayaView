@@ -108,6 +108,12 @@
                 android:layout_height="wrap_content"
                 android:onClick="fiveRings"
                 android:text="奥运五环"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="scrollEvent"
+                android:text="滚动事件"/>
         </LinearLayout>
 
     </LinearLayout>

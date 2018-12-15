@@ -11,6 +11,7 @@ import com.speex.studyview.aty.FlowLayoutActivity;
 import com.speex.studyview.aty.ProgressActivity;
 import com.speex.studyview.aty.RandomNumberActivity;
 import com.speex.studyview.aty.RectProgressActivity;
+import com.speex.studyview.aty.ScrollerActivity;
 import com.speex.studyview.aty.SettingActivity;
 import com.speex.studyview.aty.TextImageActivity;
 import com.speex.studyview.aty.ViewGroup1Activity;
@@ -125,10 +126,21 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * 奥运五环
+     *
      * @param view
      */
     public void fiveRings(View view) {
         Intent intent = new Intent(this, FiveRingsActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 滚动事件
+     *
+     * @param view
+     */
+    public void scrollEvent(View view) {
+        Intent intent = new Intent(this, ScrollerActivity.class);
         startActivity(intent);
     }
 

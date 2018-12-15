@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.speex.studyview.aty.ScrollerActivity">
+
+    <Button
+        android:id="@+id/btn_scroll_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ScrollTo"/>
+
+    <Button
+        android:id="@+id/btn_scroll_by"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_scroll_to"
+        android:text="ScrollBy"/>
+
+    <com.speex.studyview.view.ScrollerLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@android:color/darker_gray">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:text="第1个界面"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="第2个界面"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:text="第3个界面"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:text="第4个界面"/>
+
+    </com.speex.studyview.view.ScrollerLayout>
+
+</RelativeLayout>

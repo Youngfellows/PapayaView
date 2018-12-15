@@ -40,6 +40,8 @@
         </activity>
         <activity android:name=".aty.FiveRingsActivity">
         </activity>
+        <activity android:name=".aty.ScrollerActivity">
+        </activity>
     </application>
 
 </manifest>
