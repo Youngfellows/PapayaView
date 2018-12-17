@@ -114,6 +114,12 @@
                 android:layout_height="wrap_content"
                 android:onClick="scrollEvent"
                 android:text="滚动事件"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="mixImageText"
+                android:text="组合控件"/>
         </LinearLayout>
 
     </LinearLayout>

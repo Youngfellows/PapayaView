@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context="com.speex.studyview.aty.MixImageActivity">
+
+    <com.speex.studyview.view.MixTextImage
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:mix_image_alpha="255"
+        app:mix_image_height="150dp"
+        app:mix_image_src="@mipmap/mm11"
+        app:mix_image_width="150dp"
+        app:mix_title="妹妹好漂亮"
+        app:mix_title_color="@android:color/holo_red_light"
+        app:mix_title_size="7sp">
+
+    </com.speex.studyview.view.MixTextImage>
+
+    <com.speex.studyview.view.MixTextImage
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        app:mix_image_alpha="255"
+        app:mix_image_height="150dp"
+        app:mix_image_src="@mipmap/mm09"
+        app:mix_image_width="150dp"
+        app:mix_title="桃园谷力香"
+        app:mix_title_color="@android:color/black"
+        app:mix_title_size="7sp">
+
+    </com.speex.studyview.view.MixTextImage>
+
+</LinearLayout>

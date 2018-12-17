@@ -8,6 +8,7 @@ import android.view.View;
 import com.speex.studyview.aty.CakeActivity;
 import com.speex.studyview.aty.FiveRingsActivity;
 import com.speex.studyview.aty.FlowLayoutActivity;
+import com.speex.studyview.aty.MixImageActivity;
 import com.speex.studyview.aty.ProgressActivity;
 import com.speex.studyview.aty.RandomNumberActivity;
 import com.speex.studyview.aty.RectProgressActivity;
@@ -141,6 +142,16 @@ public class MainActivity extends AppCompatActivity {
      */
     public void scrollEvent(View view) {
         Intent intent = new Intent(this, ScrollerActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 组合控件
+     *
+     * @param view
+     */
+    public void mixImageText(View view) {
+        Intent intent = new Intent(this, MixImageActivity.class);
         startActivity(intent);
     }
 

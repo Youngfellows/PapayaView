@@ -77,4 +77,16 @@
         <attr name="circle_color" format="color"/>
         <attr name="stroke_width" format="dimension"/>
     </declare-styleable>
+
+    <!--组合式控件-->
+    <declare-styleable name="MixTextImage">
+        <attr name="mix_image_src" format="reference"/>
+        <attr name="mix_image_bg" format="reference"/>
+        <attr name="mix_image_width" format="dimension"/>
+        <attr name="mix_image_height" format="dimension"/>
+        <attr name="mix_image_alpha" format="integer"/>
+        <attr name="mix_title" format="string"/>
+        <attr name="mix_title_color" format="color"/>
+        <attr name="mix_title_size" format="dimension"/>
+    </declare-styleable>
 </resources>

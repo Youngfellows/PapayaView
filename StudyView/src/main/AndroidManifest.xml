@@ -42,6 +42,8 @@
         </activity>
         <activity android:name=".aty.ScrollerActivity">
         </activity>
+        <activity android:name=".aty.MixImageActivity">
+        </activity>
     </application>
 
 </manifest>
