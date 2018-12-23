@@ -89,4 +89,14 @@
         <attr name="mix_title_color" format="color"/>
         <attr name="mix_title_size" format="dimension"/>
     </declare-styleable>
+
+    <!--圆角图片-->
+    <declare-styleable name="CircleImageView">
+        <attr name="border_radius" format="dimension"/>
+        <attr name="src" format="reference"/>
+        <attr name="type">
+            <enum name="circle" value="0"/>
+            <enum name="round" value="1"/>
+        </attr>
+    </declare-styleable>
 </resources>

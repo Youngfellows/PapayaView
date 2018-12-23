@@ -122,6 +122,17 @@
                 android:text="组合控件"/>
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="circleImage"
+                android:text="圆角图片"/>
+        </LinearLayout>
+
     </LinearLayout>
 
 </ScrollView>

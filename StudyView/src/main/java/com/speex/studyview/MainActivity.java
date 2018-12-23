@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.speex.studyview.aty.CakeActivity;
+import com.speex.studyview.aty.CircleImageActivity;
 import com.speex.studyview.aty.FiveRingsActivity;
 import com.speex.studyview.aty.FlowLayoutActivity;
 import com.speex.studyview.aty.MixImageActivity;
@@ -152,6 +153,17 @@ public class MainActivity extends AppCompatActivity {
      */
     public void mixImageText(View view) {
         Intent intent = new Intent(this, MixImageActivity.class);
+        startActivity(intent);
+    }
+
+
+    /**
+     * 圆形图片
+     *
+     * @param view
+     */
+    public void circleImage(View view) {
+        Intent intent = new Intent(this, CircleImageActivity.class);
         startActivity(intent);
     }
 
