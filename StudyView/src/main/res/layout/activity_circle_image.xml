@@ -1,20 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
     tools:context="com.speex.studyview.aty.CircleImageActivity">
 
     <com.speex.studyview.view.CircleImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
         android:padding="10dp"
         app:border_radius="10dp"
         app:src="@mipmap/mm11"
         app:type="circle"/>
 
+    <com.speex.studyview.view.CircleImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        app:border_radius="30dp"
+        app:src="@mipmap/mm09"
+        app:type="round"/>
 
-</RelativeLayout>
+</LinearLayout>

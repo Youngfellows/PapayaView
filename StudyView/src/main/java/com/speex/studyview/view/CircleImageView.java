@@ -1,23 +1,20 @@
 package com.speex.studyview.view;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
+import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.widget.ImageView;
 
 import com.speex.studyview.R;
 import com.speex.studyview.utils.StringUtils;
-
-import java.io.InputStream;
 
 /**
  * Created by Byron on 2018/12/23.
@@ -126,6 +123,11 @@ public class CircleImageView extends ImageView {
                 break;
         }
 
+        //圆形图片居中设置
+        if (mType == TYPE_CIRCLE) {
+            width = Math.min(width, height);
+            height = width;
+        }
         //设置宽高
         Log.i(TAG, "width: " + width + " ,height: " + height);
         setMeasuredDimension(width, height);
@@ -136,6 +138,7 @@ public class CircleImageView extends ImageView {
 //        super.onDraw(canvas);
         int width = getWidth();
         int height = getHeight();
+        Log.i(TAG, "onDraw width: " + width + " ,height: " + height);
 
         if (mType == TYPE_CIRCLE) {
             //绘制圆形图片
@@ -143,15 +146,15 @@ public class CircleImageView extends ImageView {
             Log.i(TAG, "minSize: " + minSize);
             //长度如果不一致，按小的值进行压缩
             Bitmap scaledBitmap = Bitmap.createScaledBitmap(mBitmapSrc, minSize, minSize, false);
-//            createCircleBitmap(scaledBitmap, minSize);
             canvas.drawBitmap(createCircleBitmap(scaledBitmap, minSize), 0, 0, null);
         } else if (mType == TYPE_ROUND) {
             //绘制圆角图片
+            canvas.drawBitmap(createRoundConerBitmap(mBitmapSrc, width, height), 0, 0, null);
         }
     }
 
     /**
-     * 获取圆形图片
+     * 圆形图片
      *
      * @param source
      * @param min
@@ -175,39 +178,32 @@ public class CircleImageView extends ImageView {
     }
 
     /**
-     * 根据原图和变长绘制圆形图片
+     * 圆角图片
+     *
+     * @param source
+     * @param width
+     * @param height
+     * @return
      */
-    private Bitmap createCircleImage(Bitmap source, int min) {
-        final Paint paint = new Paint();
+    private Bitmap createRoundConerBitmap(Bitmap source, int width, int height) {
+        Paint paint = new Paint();
         paint.setAntiAlias(true);
-        Bitmap target = Bitmap.createBitmap(min, min, Bitmap.Config.ARGB_8888);
-        /**
-         * 产生一个同样大小的画布
-         */
+        Bitmap target = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
+
+        //产生一个同样大小的画布
         Canvas canvas = new Canvas(target);
-        /**
-         * 首先绘制圆形
-         */
-        canvas.drawCircle(min / 2, min / 2, min / 2, paint);
-        /**
-         * 使用SRC_IN，参考上面的说明
-         */
+
+        //图片边界
+        RectF rectF = new RectF(0, 0, source.getWidth(), source.getHeight());
+        canvas.drawRoundRect(rectF, mBorderRadius, mBorderRadius, paint);//圆角
+
+        //使用SRC_IN，参考上面的说明
         paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
-        /**
-         * 绘制图片
-         */
+
+        //绘制图片
         canvas.drawBitmap(source, 0, 0, paint);
         return target;
     }
 
-    public static Bitmap readBitmapFromResource(Context context, int resId) {
-        BitmapFactory.Options op = new BitmapFactory.Options();
-        op.inPreferredConfig = Bitmap.Config.ARGB_8888;
-        op.inDither = false;
-        op.inScaled = false;
-
-        InputStream is = context.getResources().openRawResource(resId);
-        return BitmapFactory.decodeStream(is, null, op);
-    }
 
 }
