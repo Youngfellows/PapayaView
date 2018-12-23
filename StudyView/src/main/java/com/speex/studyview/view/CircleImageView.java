@@ -2,6 +2,7 @@ package com.speex.studyview.view;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -9,9 +10,9 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.widget.ImageView;
 
 import com.speex.studyview.R;
 import com.speex.studyview.utils.StringUtils;
@@ -23,35 +24,43 @@ import java.io.InputStream;
  * 圆角图片
  */
 
-public class CircleImageView extends BaseView {
-
+public class CircleImageView extends ImageView {
+    private String TAG = this.getClass().getSimpleName();
     private Bitmap mBitmapSrc;
     private int mBorderRadius;
+    private Context mContext;
     private int mType;
     private static int TYPE_CIRCLE = 0;//圆形
     private static int TYPE_ROUND = 1;//圆角
+    private TypedArray mTypedArray;
 
     public CircleImageView(Context context) {
         this(context, null);
     }
 
-    public CircleImageView(Context context, @Nullable AttributeSet attrs) {
+    public CircleImageView(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public CircleImageView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public CircleImageView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        mContext = context;
         init(attrs, defStyleAttr, R.styleable.CircleImageView);
     }
 
-    @Override
     public void init(AttributeSet set, int defStyleAttr, int[] attrs) {
-        super.init(set, defStyleAttr, attrs);
+        getAttrs(set, defStyleAttr, attrs);
     }
 
-    @Override
+    /**
+     * 获得自定义的样式属性，需要子类复写
+     *
+     * @param set
+     * @param defStyleAttr
+     * @param attrs
+     */
     public void getAttrs(AttributeSet set, int defStyleAttr, int[] attrs) {
-        super.getAttrs(set, defStyleAttr, attrs);
+        mTypedArray = mContext.getTheme().obtainStyledAttributes(set, attrs, defStyleAttr, 0);
         int resourceId = mTypedArray.getResourceId(R.styleable.CircleImageView_src, 0);
         //图片资源
         mBitmapSrc = BitmapFactory.decodeResource(getResources(), resourceId);
@@ -122,7 +131,6 @@ public class CircleImageView extends BaseView {
         setMeasuredDimension(width, height);
     }
 
-    @SuppressLint("DrawAllocation")
     @Override
     protected void onDraw(Canvas canvas) {
 //        super.onDraw(canvas);
@@ -135,8 +143,8 @@ public class CircleImageView extends BaseView {
             Log.i(TAG, "minSize: " + minSize);
             //长度如果不一致，按小的值进行压缩
             Bitmap scaledBitmap = Bitmap.createScaledBitmap(mBitmapSrc, minSize, minSize, false);
-            createCircleBitmap(scaledBitmap, minSize);
-//            canvas.drawBitmap(createCircleBitmap(canvas, scaledBitmap, minSize), 0, 0, null);
+//            createCircleBitmap(scaledBitmap, minSize);
+            canvas.drawBitmap(createCircleBitmap(scaledBitmap, minSize), 0, 0, null);
         } else if (mType == TYPE_ROUND) {
             //绘制圆角图片
         }
@@ -151,7 +159,6 @@ public class CircleImageView extends BaseView {
      */
     private Bitmap createCircleBitmap(Bitmap source, int min) {
         Paint paint = new Paint();
-        paint.setColor(Color.GREEN);
         paint.setAntiAlias(true);
         Bitmap target = Bitmap.createBitmap(min, min, Bitmap.Config.ARGB_8888);
         //产生一个同样大小的画布
@@ -163,8 +170,34 @@ public class CircleImageView extends BaseView {
         paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
 
         //绘制图片
-        canvas.drawBitmap(target, 0, 0, paint);
-        return source;
+        canvas.drawBitmap(source, 0, 0, paint);
+        return target;
+    }
+
+    /**
+     * 根据原图和变长绘制圆形图片
+     */
+    private Bitmap createCircleImage(Bitmap source, int min) {
+        final Paint paint = new Paint();
+        paint.setAntiAlias(true);
+        Bitmap target = Bitmap.createBitmap(min, min, Bitmap.Config.ARGB_8888);
+        /**
+         * 产生一个同样大小的画布
+         */
+        Canvas canvas = new Canvas(target);
+        /**
+         * 首先绘制圆形
+         */
+        canvas.drawCircle(min / 2, min / 2, min / 2, paint);
+        /**
+         * 使用SRC_IN，参考上面的说明
+         */
+        paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
+        /**
+         * 绘制图片
+         */
+        canvas.drawBitmap(source, 0, 0, paint);
+        return target;
     }
 
     public static Bitmap readBitmapFromResource(Context context, int resId) {
