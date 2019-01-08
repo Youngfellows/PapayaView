@@ -10,6 +10,7 @@
     tools:context="com.speex.studyview.aty.CircleImageActivity">
 
     <com.speex.studyview.view.CircleImageView
+        android:id="@+id/circleImageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="10dp"

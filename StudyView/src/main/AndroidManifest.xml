@@ -46,6 +46,8 @@
         </activity>
         <activity android:name=".aty.CircleImageActivity">
         </activity>
+        <activity android:name=".aty.LoadActivity">
+        </activity>
     </application>
 
 </manifest>

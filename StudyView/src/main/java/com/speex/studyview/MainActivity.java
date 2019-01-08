@@ -9,6 +9,7 @@ import com.speex.studyview.aty.CakeActivity;
 import com.speex.studyview.aty.CircleImageActivity;
 import com.speex.studyview.aty.FiveRingsActivity;
 import com.speex.studyview.aty.FlowLayoutActivity;
+import com.speex.studyview.aty.LoadActivity;
 import com.speex.studyview.aty.MixImageActivity;
 import com.speex.studyview.aty.ProgressActivity;
 import com.speex.studyview.aty.RandomNumberActivity;
@@ -164,6 +165,17 @@ public class MainActivity extends AppCompatActivity {
      */
     public void circleImage(View view) {
         Intent intent = new Intent(this, CircleImageActivity.class);
+        startActivity(intent);
+    }
+
+
+    /**
+     * 下拉刷新，上滑加载
+     *
+     * @param view
+     */
+    public void pullToRefresh(View view) {
+        Intent intent = new Intent(this, LoadActivity.class);
         startActivity(intent);
     }
 
