@@ -37,7 +37,16 @@ public class LoadActivity extends AppCompatActivity {
         mLoadListView.setLoadListViewListener(new LoadListView.ILoadListViewListener() {
             @Override
             public void onRefresh() {
-                Log.i(TAG, "onRefresh: 正在刷新");
+                Log.e(TAG, "onRefresh: 正在刷新");
+                mHandler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        //下拉刷新
+                        mDatas.add(0, "下拉刷新的数据");
+                        mArrayAdapter.notifyDataSetChanged();
+                        mLoadListView.onRefreshComplete();
+                    }
+                }, 1000 * 3);
             }
 
             @Override
