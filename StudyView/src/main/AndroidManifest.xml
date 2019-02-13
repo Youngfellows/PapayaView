@@ -48,6 +48,8 @@
         </activity>
         <activity android:name=".aty.LoadActivity">
         </activity>
+        <activity android:name=".aty.RecyclerLoadActivity">
+        </activity>
     </application>
 
 </manifest>

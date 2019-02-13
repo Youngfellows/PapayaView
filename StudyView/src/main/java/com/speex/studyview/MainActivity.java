@@ -14,6 +14,7 @@ import com.speex.studyview.aty.MixImageActivity;
 import com.speex.studyview.aty.ProgressActivity;
 import com.speex.studyview.aty.RandomNumberActivity;
 import com.speex.studyview.aty.RectProgressActivity;
+import com.speex.studyview.aty.RecyclerLoadActivity;
 import com.speex.studyview.aty.ScrollerActivity;
 import com.speex.studyview.aty.SettingActivity;
 import com.speex.studyview.aty.TextImageActivity;
@@ -176,6 +177,16 @@ public class MainActivity extends AppCompatActivity {
      */
     public void pullToRefresh(View view) {
         Intent intent = new Intent(this, LoadActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * RecyclerView下拉刷新，上滑加载
+     *
+     * @param view
+     */
+    public void pullToRefreshRV(View view) {
+        Intent intent = new Intent(this, RecyclerLoadActivity.class);
         startActivity(intent);
     }
 

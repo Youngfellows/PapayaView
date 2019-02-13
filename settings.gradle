@@ -1,1 +1,1 @@
-include ':app', ':StudyView'
+include ':app', ':StudyView', ':lib_recyclerview'

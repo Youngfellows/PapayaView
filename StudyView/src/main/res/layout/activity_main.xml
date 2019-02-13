@@ -137,6 +137,12 @@
                 android:layout_height="wrap_content"
                 android:onClick="pullToRefresh"
                 android:text="下拉刷新,上滑加载"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="pullToRefreshRV"
+                android:text="RV下拉刷新,上滑加载"/>
         </LinearLayout>
 
     </LinearLayout>
