@@ -50,6 +50,10 @@
         </activity>
         <activity android:name=".aty.RecyclerLoadActivity">
         </activity>
+        <activity android:name=".aty.SinActivity">
+        </activity>
+        <activity android:name=".aty.DrawPanActivity">
+        </activity>
     </application>
 
 </manifest>

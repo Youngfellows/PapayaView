@@ -7,6 +7,7 @@ import android.view.View;
 
 import com.speex.studyview.aty.CakeActivity;
 import com.speex.studyview.aty.CircleImageActivity;
+import com.speex.studyview.aty.DrawPanActivity;
 import com.speex.studyview.aty.FiveRingsActivity;
 import com.speex.studyview.aty.FlowLayoutActivity;
 import com.speex.studyview.aty.LoadActivity;
@@ -17,6 +18,7 @@ import com.speex.studyview.aty.RectProgressActivity;
 import com.speex.studyview.aty.RecyclerLoadActivity;
 import com.speex.studyview.aty.ScrollerActivity;
 import com.speex.studyview.aty.SettingActivity;
+import com.speex.studyview.aty.SinActivity;
 import com.speex.studyview.aty.TextImageActivity;
 import com.speex.studyview.aty.ViewGroup1Activity;
 import com.speex.studyview.aty.ViewGroup2Activity;
@@ -187,6 +189,26 @@ public class MainActivity extends AppCompatActivity {
      */
     public void pullToRefreshRV(View view) {
         Intent intent = new Intent(this, RecyclerLoadActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * SurfaceView绘Sin曲线
+     *
+     * @param view
+     */
+    public void drawSin(View view) {
+        Intent intent = new Intent(this, SinActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * SurfaceView绘制绘图板
+     *
+     * @param view
+     */
+    public void drawPan(View view) {
+        Intent intent = new Intent(this, DrawPanActivity.class);
         startActivity(intent);
     }
 

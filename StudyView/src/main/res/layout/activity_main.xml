@@ -145,6 +145,24 @@
                 android:text="RV下拉刷新,上滑加载"/>
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="drawSin"
+                android:text="Sin曲线"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="drawPan"
+                android:text="SurfaceView绘图板"/>
+
+        </LinearLayout>
+
     </LinearLayout>
 
 </ScrollView>
