@@ -54,6 +54,7 @@ public class DrawableSurfaceView extends SurfaceView implements SurfaceHolder.Ca
         if (attrs != null) {
             TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.DrawableSurfaceView);
             drawable = typedArray.getDrawable(R.styleable.DrawableSurfaceView_imgSrc);
+            typedArray.recycle();
         } else {
             drawable = context.getResources().getDrawable(R.mipmap.ic_launcher);
         }
