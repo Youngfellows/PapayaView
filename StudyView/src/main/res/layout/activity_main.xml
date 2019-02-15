@@ -161,6 +161,12 @@
                 android:onClick="drawPan"
                 android:text="SurfaceView绘图板"/>
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="drawPhoto"
+                android:text="绘图"/>
+
         </LinearLayout>
 
     </LinearLayout>

@@ -99,4 +99,8 @@
             <enum name="round" value="1"/>
         </attr>
     </declare-styleable>
+
+    <declare-styleable name="DrawableSurfaceView">
+        <attr name="imgSrc" format="reference"/>
+    </declare-styleable>
 </resources>

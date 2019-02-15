@@ -1,8 +1,8 @@
 package com.speex.studyview;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.speex.studyview.aty.CakeActivity;
@@ -12,6 +12,7 @@ import com.speex.studyview.aty.FiveRingsActivity;
 import com.speex.studyview.aty.FlowLayoutActivity;
 import com.speex.studyview.aty.LoadActivity;
 import com.speex.studyview.aty.MixImageActivity;
+import com.speex.studyview.aty.PhotoDrawActivity;
 import com.speex.studyview.aty.ProgressActivity;
 import com.speex.studyview.aty.RandomNumberActivity;
 import com.speex.studyview.aty.RectProgressActivity;
@@ -209,6 +210,16 @@ public class MainActivity extends AppCompatActivity {
      */
     public void drawPan(View view) {
         Intent intent = new Intent(this, DrawPanActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 绘制图片
+     *
+     * @param view
+     */
+    public void drawPhoto(View view) {
+        Intent intent = new Intent(this, PhotoDrawActivity.class);
         startActivity(intent);
     }
 

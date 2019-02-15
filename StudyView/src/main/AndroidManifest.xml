@@ -54,6 +54,8 @@
         </activity>
         <activity android:name=".aty.DrawPanActivity">
         </activity>
+        <activity android:name=".aty.PhotoDrawActivity">
+        </activity>
     </application>
 
 </manifest>
