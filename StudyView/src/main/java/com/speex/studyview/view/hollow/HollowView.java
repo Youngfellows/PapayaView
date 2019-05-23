@@ -89,7 +89,7 @@ public class HollowView extends BaseView {
         mHollowRadius = mTypedArray.getDimensionPixelSize(R.styleable.HollowView_hollow_radius, StringUtils.getDip(mContext, 50));
         mHollowCenterX = mTypedArray.getDimensionPixelSize(R.styleable.HollowView_hollow_centerX, StringUtils.getDip(mContext, 50));
         mHollowCenterY = mTypedArray.getDimensionPixelSize(R.styleable.HollowView_hollow_centerY, StringUtils.getDip(mContext, 50));
-        mHollowColor = mTypedArray.getColor(R.styleable.MixTextImage_mix_title_color, Color.BLACK);
+        mHollowColor = mTypedArray.getColor(R.styleable.HollowView_hollow_color, Color.BLACK);
         mTypedArray.recycle();
 
         Log.d(TAG, "半径: " + mHollowRadius + " ,圆心(" + mHollowCenterX + "," + mHollowCenterY + "),颜色: " + mHollowColor);
