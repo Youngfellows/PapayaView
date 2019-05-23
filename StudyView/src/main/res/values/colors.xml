@@ -7,4 +7,5 @@
     <color name="white">#ffffff</color>
     <color name="transparent">#00000000</color>
     <color name="gold">#b89766</color>
+    <color name="colorHollow">#32000000</color>
 </resources>

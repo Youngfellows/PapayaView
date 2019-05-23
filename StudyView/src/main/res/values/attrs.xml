@@ -103,4 +103,12 @@
     <declare-styleable name="DrawableSurfaceView">
         <attr name="imgSrc" format="reference"/>
     </declare-styleable>
+
+    <!--镂空图片-->
+    <declare-styleable name="HollowView">
+        <attr name="hollow_radius" format="dimension"/>
+        <attr name="hollow_color" format="color"/>
+        <attr name="hollow_centerX" format="dimension"/>
+        <attr name="hollow_centerY" format="dimension"/>
+    </declare-styleable>
 </resources>

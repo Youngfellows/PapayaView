@@ -169,6 +169,18 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="hollowCircle"
+                android:text="镂空圆"/>
+
+        </LinearLayout>
+
     </LinearLayout>
 
 </ScrollView>

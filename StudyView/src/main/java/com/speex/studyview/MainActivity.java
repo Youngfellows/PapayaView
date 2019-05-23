@@ -10,6 +10,7 @@ import com.speex.studyview.aty.CircleImageActivity;
 import com.speex.studyview.aty.DrawPanActivity;
 import com.speex.studyview.aty.FiveRingsActivity;
 import com.speex.studyview.aty.FlowLayoutActivity;
+import com.speex.studyview.aty.HollowActivity;
 import com.speex.studyview.aty.LoadActivity;
 import com.speex.studyview.aty.MixImageActivity;
 import com.speex.studyview.aty.PhotoDrawActivity;
@@ -220,6 +221,16 @@ public class MainActivity extends AppCompatActivity {
      */
     public void drawPhoto(View view) {
         Intent intent = new Intent(this, PhotoDrawActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 绘制镂空圆
+     *
+     * @param view
+     */
+    public void hollowCircle(View view) {
+        Intent intent = new Intent(this, HollowActivity.class);
         startActivity(intent);
     }
 

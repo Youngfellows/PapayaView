@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.speex.studyview">
+<manifest package="com.speex.studyview"
+          xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
         android:allowBackup="true"
@@ -55,6 +55,8 @@
         <activity android:name=".aty.DrawPanActivity">
         </activity>
         <activity android:name=".aty.PhotoDrawActivity">
+        </activity>
+        <activity android:name=".aty.HollowActivity">
         </activity>
     </application>
 
