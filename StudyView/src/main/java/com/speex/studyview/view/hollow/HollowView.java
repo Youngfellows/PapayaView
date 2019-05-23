@@ -49,6 +49,11 @@ public class HollowView extends BaseView {
      */
     private Paint mHollowPaint;
 
+    /**
+     * 设置是否进入状态，true进入状态，false离开状态，默认是离开状态
+     */
+    private boolean isEnter = false;//
+
     public HollowView(Context context) {
         this(context, null);
     }
@@ -66,6 +71,16 @@ public class HollowView extends BaseView {
     public void init(AttributeSet set, int defStyleAttr, int[] attrs) {
         super.init(set, defStyleAttr, attrs);
         initAttr();
+    }
+
+    /**
+     * 设置是否进入状态
+     *
+     * @param enter
+     */
+    public void setEnterState(boolean enter) {
+        isEnter = enter;
+        invalidate();
     }
 
     @Override
@@ -106,15 +121,22 @@ public class HollowView extends BaseView {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        //先绘制背景
-        canvas.drawRect(0, 0, getWidth(), getHeight(), mHollowPaint);
+        Log.d(TAG, "onDraw(), " + (isEnter ? "进入状态" : "离开状态"));
+        if (!isEnter) {
+            //离开状态
+            //先绘制背景
+            canvas.drawRect(0, 0, getWidth(), getHeight(), mHollowPaint);
 
-        //绘制镂空圆
-        //从绘制模式图片得知 这种模式会导致挖空的区域消失
-        Xfermode mXfermode = new PorterDuffXfermode(PorterDuff.Mode.DST_OUT);
-        mHollowPaint.setXfermode(mXfermode);
-        canvas.drawCircle(mHollowCenterX, mHollowCenterY, mHollowRadius, mHollowPaint);
-        mHollowPaint.setXfermode(null);
+            //绘制镂空圆
+            //从绘制模式图片得知 这种模式会导致挖空的区域消失
+            Xfermode mXfermode = new PorterDuffXfermode(PorterDuff.Mode.DST_OUT);
+            mHollowPaint.setXfermode(mXfermode);
+            canvas.drawCircle(mHollowCenterX, mHollowCenterY, mHollowRadius, mHollowPaint);
+            mHollowPaint.setXfermode(null);
+        } else {
+            //进入状态
+            canvas.drawCircle(mHollowCenterX, mHollowCenterY, mHollowRadius, mHollowPaint);
+        }
     }
 
     @Override
@@ -131,7 +153,7 @@ public class HollowView extends BaseView {
                 break;
             case MotionEvent.ACTION_UP:
                 Log.w(TAG, "松开 ACTION_UP ,坐标(" + x + " ," + y + ") ,圆心(" + mHollowCenterX + " ," + mHollowCenterY + ")");
-                mHollowRadius = (int) Math.min(Math.abs(x - mHollowCenterX), Math.abs(y - mHollowCenterY));
+                mHollowRadius = (int) Math.max(Math.abs(x - mHollowCenterX), Math.abs(y - mHollowCenterY));
                 Log.w(TAG, "缩放的半径: mHollowRadius = " + mHollowRadius);
                 break;
             case MotionEvent.ACTION_CANCEL:

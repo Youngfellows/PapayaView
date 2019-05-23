@@ -8,6 +8,7 @@
     android:background="@mipmap/mm05"
     tools:context="com.speex.studyview.aty.HollowActivity">
 
+
     <com.speex.studyview.view.hollow.HollowView
         android:id="@+id/hollow"
         android:layout_width="match_parent"
@@ -17,5 +18,26 @@
         app:hollow_centerY="40dp"
         app:hollow_color="@color/colorHollow"
         app:hollow_radius="50dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="enter"
+            android:text="进入"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="exit"
+            android:text="离开"/>
+
+    </LinearLayout>
 
 </RelativeLayout>
